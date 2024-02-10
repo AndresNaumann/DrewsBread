@@ -9,7 +9,7 @@ $(document).ready(function () {
         var inputValue = $("#breadQuantity").val();
 
         // Check if the input is a valid number
-        if (!isNaN(inputValue)) {
+        if (!isNaN(inputValue) && inputValue > 0) {
             // Multiply the value by 67.89
             var result = inputValue * 67.89;
 
@@ -18,6 +18,7 @@ $(document).ready(function () {
         } else {
             // Show an alert if the input is not a valid number
             alert("Please enter a valid number");
+            history.back()
         }
     });
 });
