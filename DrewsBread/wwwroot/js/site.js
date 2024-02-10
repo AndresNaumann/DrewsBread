@@ -3,4 +3,22 @@
 
 // Write your JavaScript code.
 
-// something
+// JQuery Code to show an alert when the user clicks a button.
+$(document).ready(function () {
+    $("#submitbtn").click(function () {
+        var inputValue = $("#breadQuantity").val();
+
+        // Check if the input is a valid number
+        if (!isNaN(inputValue)) {
+            // Multiply the value by 67.89
+            var result = inputValue * 67.89;
+
+            // Show the result in an alert
+            alert("You owe me $" + result + ". This bread will be soooo good.\nDon't wash your hands before. We need the extra yeast.");
+        } else {
+            // Show an alert if the input is not a valid number
+            alert("Please enter a valid number");
+        }
+    });
+});
+
